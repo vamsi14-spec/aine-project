@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Login</title>
+ <style>
+   h1{
+      color: orange;
+	 text-align: center;
+	 padding: 20px;
+	 background: black;
+	 opacity: 0.4;
+   }
+   .login{
+       background: grey;
+	  width: 800px;
+	  height: 500px;
+	  margin-left: auto;
+	  margin-right: auto;
+	  opacity: 0.9;
+   }
+   #u_name,#s_name{
+     border: 1px solid grey;
+	 width: 250px;
+	 border-radius: 3px;
+	 padding: 10px;
+	 margin-left: 30px;
+   }
+   #pswd{
+     border: 1px solid grey;
+	 border-radius: 3px;
+	 width: 500px;
+	 padding: 10px;
+	 color: red;
+	 margin: 10px 0;
+	  margin-left: 30px;
+   }
+   #email{
+          border: 1px solid grey;
+	 width: 500px;
+	 border-radius: 3px;
+	 padding: 10px;
+	 margin-left: 30px;
+   }
+   #date{
+               border: 1px solid grey;
+	 width: 500px;
+	 border-radius: 3px;
+	 padding: 10px;
+	 margin-left: 30px;
+   }
+   #gendererr{
+              border: 1px solid grey;
+	 width: 500px;
+	 border-radius: 3px;
+	 padding: 10px;
+	 margin-left: 30px;
+   }
+   #login{  
+	  border: 1px solid grey;
+	  background: #4FF14E;
+	  border-radius: 3px;
+	  padding: 10px;
+	  color: white;
+	  margin: 10px 0;
+	  margin-left: 30px;
+   }
+   label{
+      color: white;
+	  margin: 30px;
+	  font-weight: bold;
+	  font-family: san-serif;
+   }
+   span{
+     margin-left: 30px;
+	 font-size: 5px;
+   }
+   #gender{
+       box-sizing: border-box;
+    color: #1c1e21;
+    display: inline-block;
+    font-family: SFProText-Medium, Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 36px;
+    padding: 0 28px 0 10px;
+    width: 100%;
+	}
+	.gender{
+	  display: flex;
+    flex-wrap: wrap;
+    margin: -8px -6px -6px;
+    width: 411px;
+	}
+	.child-gen{
+	     background-color: #fff;
+    border: 1px solid #ccd0d5;
+    box-sizing: border-box;
+    /* display: inline-block; */
+    flex: 1 0 auto;
+    font-weight: normal;
+    height: 36px;
+    margin: 8px 6px 6px;
+    padding: 0;
+    position: relative;
+    width: auto
+	}
+ </style>
+ </head>
+ <body>
+   <form>
+
+   <div class = "login">
+        <h1>Login</h1>
+     
+     <input type = "text" id = "name" placeholder = "User name">
+	 <span id= "usererr">User name is not empty</span>
+	  <input type = "text" id = "surname" placeholder = "Sur name">
+	 <span id= "surerr">Sur name is not empty</span><br>  
+	  <input type = "text" id = "email" placeholder = "Mobile number or Email address ">
+	 <span id= "emailerr">Mobile number or Email address  is not empty</span><br>
+	 
+     <input type = "password" id = "pswd" placeholder = "Enter your password"><br>
+	  <span id="pswderr">password is not empty</span>
+	   <input type = "date" id = "date" placeholder = "Date of birth ">
+	 <span id= "birtherr">User name is not empty</span><br>
+	 
+
+     <button type = "submit" onclick="logIn();" id = "login">SignUp</button>
+   </form>
+   </div>
+   <script>
+      window.onload = function() {
+   var name=null,pswd=null;
+	name = document.getElementById('name').value
+	pswd = document.getElementById('pswd').value;
+     if(name=='' || name==null){
+      document.getElementById('usererr').style.display = 'none';
+     }
+	   if(pswd=='' || pswd==null){
+	  document.getElementById('pswderr').style.display = 'none';
+    logIn('','jdhgfgfs');
+     }
+  }
+    function logIn(obj='',obj2){ 
+    //event.preventdefault();
+     var u_name,s_name,email,pswd,date,gender; 
+     u_name = document.getElementById('name').value; 
+    if(u_name==''){ 
+     document.getElementById('name').style.border = '1px solid red'; 
+   
+   }
+   console.log(obj);
+  }
+   </script>
+   </body>
+ </html>
+   
+   
+   
+   
+   
+   
+   
+   

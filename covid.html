@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid Registration Form</title>
+    <link rel="stylesheets" href="https://fontawesome.com/icons/calendar-week?style=solid">
+    <style>
+        label{
+            font-family: 'poppins',sans-serif;
+            font-size: 10px;
+            margin-left: 20px;
+        }
+        input{
+            margin-left: 20px;
+        }
+        body{
+            overflow-x: hidden;
+            height: 100%;
+        }
+        .container{
+            width: 100%;
+            height: 100vh;
+            /* display: flex;
+            justify-content: center;
+            align-items: center; */
+            border:5px solid blue;
+        }
+        .main-container{
+            position: relative;
+            top: 10px;
+            left: 100px;
+            box-sizing: border-box;
+            border: none;
+            width: 700px;
+            box-shadow: 0 0 10px gray;
+            height: 440px;
+        }
+       
+        h1{
+            text-align: center;
+            font-family: 'poppins',sans-serif;
+            font-size: 20px;
+           padding: 20px;
+        }
+        #text{
+            border-radius: 4px;
+            margin-left: 20px;
+            border: 0.7px solid grey;
+        }
+        #text:hover{
+            border-color: skyblue; 
+        }
+        #DOB:hover{
+            border-color: skyblue; 
+        }
+        #name{
+            position: relative;
+            top: 20px;
+            left: -195px;
+            font-family: 'poppins',sans-serif;
+            font-size: 10px;
+
+        }
+        #lastname{
+            border-radius: 4px;
+            border: 0.7px solid grey;
+        }
+        #lastname:hover{
+            border-color: skyblue; 
+        }
+        #DOB{
+            margin-left: 20px;
+            margin-top: 10px;
+            border-radius: 4px;
+            border: 0.7px solid grey;
+        }
+       
+        .gender{
+            position: relative;
+            left: 250px;
+            top: 0;
+        }
+        #email{
+            border: 0.7px solid grey;
+            border-radius: 4px;
+        }
+        #email:hover{
+             border-color: skyblue;
+             box-shadow: 0 10 10 10 grey; 
+        }
+        #number{
+            border-radius: 4px;
+            border: 0.7px solid grey;
+        }
+        #number:hover{
+             border-color: skyblue;
+             box-shadow: 0 10 10 10 grey; 
+        }
+        h2{
+            font-family: 'poppins',sans-serif;
+            font-size: 10px;
+            margin-left: 20px;
+        }
+        #address{
+            position: relative;
+            top: 20px;
+            left: -195px; 
+            font-family: 'poppins',sans-serif;
+            font-size: 10px;
+            
+        }
+        #street:hover{
+             border-color: skyblue;
+             box-shadow: 0 10 10 10 grey; 
+        }
+       #street{
+           border: 0.7px solid grey;
+           border-radius: 4px;
+       }
+       #city{
+           border: 0.7px solid grey;
+           border-radius: 4px;
+           margin-top: 20px;
+       }
+       #city:hover{
+             border-color: skyblue;
+             box-shadow: 0 10 10 10 grey; 
+        }
+       #City{
+            position: relative;
+            top: 20px;
+            left: -195px; 
+            font-family: 'poppins',sans-serif;
+            font-size: 10px;
+            
+        }
+        #state{
+            border: 0.7px solid grey;
+           border-radius: 4px;
+           margin-top: 20px;
+        }
+        #state:hover{
+             border-color: skyblue;
+             box-shadow: 0 10 10 10 grey; 
+        }
+        #State{
+            position: relative;
+            top: 20px;
+            left: -195px; 
+            font-family: 'poppins',sans-serif;
+            font-size: 10px;
+            
+        }
+        #postal{
+            border: 0.7px solid grey;
+           border-radius: 4px;
+           margin-top: 20px;
+        }
+        #postal:hover{
+             border-color: skyblue;
+             box-shadow: 0 10 10 10 grey; 
+        }
+        #Postal{
+            position: relative;
+            top: 20px;
+            left: -195px; 
+            font-family: 'poppins',sans-serif;
+            font-size: 10px;
+            
+        }
+        #submit{
+            border-radius: 5px ;
+            border: none;
+            padding: 10px;
+            background: blue;
+            color: white;
+            font-family:'poppins',sans-serif;
+            margin-left: 600px;
+            margin-top: 5px;
+        }
+        #submit:hover{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="main-container">
+       <h1>Covid19 Vaccine Registration Form</h1> 
+       <input type="text" id="text" >
+       <label for="text" id="name">First Name</label>
+       <input type="text" id="lastname">
+       <label for="text" id="name">Last Name</label><br><br>
+       <span class="DOB">
+        <label for="DOB" >Date Of Birth</label><br>
+       <input type="date" id="DOB" placeholder="DD-MM-YYYY"class="hover">
+       <!-- <i class="fas fa-calendar-week"></i> -->
+       </span>
+       <div class="gender">
+         <label for="gender" id="gender-name">Gender :</label>
+         <input type="radio" name="gender" id="gender" class="hover">Male
+         <input type="radio" name="gender" id="gender" class="hover">FeMale
+       </div>
+       <div class="email">
+         <label for="email" id="email-name">Enter Your Email</label><br>
+         <input type="email" id="email" class="hover">
+       <div class="number">
+           <label for="numbe">Phone Number</label><br>
+           <input type="text" id="number">
+        </div>
+         <h2>Address</h2>
+         <div class="address">
+            <input type="text" name="" id="street">
+            <label for="address" id="address">Street address</label><br>
+            <input type="text" name="" id="city">
+            <label for="address" id="City">City</label>
+            <input type="text" name="" id="state">
+            <label for="address" id="State">State</label><br>
+            <input type="text" name="" id="postal">
+            <label for="address" id="Postal">Postal Code</label>
+         </div>
+         <input type="submit" id="submit" value="Submit">
+       </div>
+    </div>
+    <div>
+        <table>
+            
+                <th>
+                    <td>Name</td>
+                    <td>Email</td>
+                    <td>Phnone Number</td>
+                    <td>Address</td>
+                </th>
+            
+            <tr>
+                <td id="lblName"></td>
+                <td id="lblEmail"></td>
+                <td id="lblPhone"></td>
+                <td id="lblAddress"></td>
+            </tr>
+        </table>
+    </div>
+    </div>
+    <script>
+       
+
+        document.getElementById('submit').addEventListener('click',function(e){
+          e.preventDefault();
+         var text,lastname,DOB,gender,email,number,street,city,state,postal;
+        text= document.getElementById('text').value;
+        lastname= document.getElementById('lastname').value;
+        DOB= document.getElementById('DOB').value;
+        gender= document.getElementById('gender').value;
+        email= document.getElementById('email').value;
+        number= document.getElementById('number').value;
+        street= document.getElementById('street').value;
+        city= document.getElementById('city').value;
+        state= document.getElementById('state').value;
+        postal= document.getElementById('postal').value;
+          if(text==''){
+              document.getElementById('text').style.border=" 2px solid red";
+          }else if(lastname==''){
+            document.getElementById('lastname').style.border=" 2px solid red";
+            document.getElementById('text').style.border=" 2px solid green";
+          }else if(DOB==''){
+            document.getElementById('DOB').style.border=" 2px solid red";
+            document.getElementById('lastname').style.border=" 2px solid green";
+          }else if(gender==''){
+            document.getElementById('DOB').style.border=" 2px solid green";
+            document.getElementById('gender').style.border=" 2px solid red";
+          }else if(email==''){
+            document.getElementById('gender').style.border=" 2px solid green";
+            document.getElementById('email').style.border=" 2px solid red";
+          }else if(number==''){
+            document.getElementById('email').style.border=" 2px solid green";
+            document.getElementById('number').style.border=" 2px solid red";
+          }else if(street==''){
+            document.getElementById('number').style.border=" 2px solid green";
+            document.getElementById('street').style.border=" 2px solid red";
+          }else if(city==''){
+            document.getElementById('city').style.border=" 2px solid red";
+            document.getElementById('street').style.border=" 2px solid green";
+          }else if(state==''){
+            document.getElementById('state').style.border=" 2px solid red";
+            document.getElementById('city').style.border=" 2px solid green";
+          }else if(postal==''){
+            document.getElementById('postal').style.border=" 2px solid red";
+            document.getElementById('state').style.border=" 2px solid green";
+          }else{
+            document.getElementById('postal').style.border=" 2px solid green";
+          }
+          var lblName=document.getElementById("lblName");
+          var lblEmail=document.getElementById("lblEmail");
+          var lblPhone=document.getElementById("lblPhone");
+          var lblAddress=document.getElementById("lblAddress");
+          document.getElementById("lblName").value=text+' '+lastname;
+
+
+        })
+    </script>
+</body>
+</html> 

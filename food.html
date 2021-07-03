@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Zomato</title>
+ <style>
+    body{
+	  padding: 0px;
+	  margin: 0px auto;
+      /* overflow-x: hidden; */
+
+	}
+	#text{
+	   border: 1px solid #ccc;
+	   border-radius: 10px;
+	   float: right;
+	   height: 10px;
+	   width: 50%;
+	   /* box-shadow: 5px 5px 10px 5px #ccc outset; */
+	   position : sticky;
+	   top: 10px;
+	   margin-right: 100px;
+	   padding: 10px;
+	   background: white url(./search.png) right no-repeat;
+	}
+	.options{
+
+	   margin: 10px;
+	  
+	}
+	ul{
+	  list-style-type: none;
+	  display: inline-flex;
+	}
+	li{
+	  border: 1px solid #000;
+	  border-radius: 10px;
+	  padding: 10px;
+	  margin: 10px;
+      display: flex;
+      height:100%;
+	  font-size: 10px;
+	}
+	.taste{
+	  display: none;
+	}
+	.taste:hover{
+	  background: #ccc;
+	  color: white;
+	  display: block;
+	}
+	.receipe{
+	    display: inline-flex; 
+	    overflow: hidden;
+	   width: 100%;
+	}
+	img{
+		width: 150px;
+		height: 150px;
+		margin-right: 5px;
+		border-radius: 50%;
+	    position: relative;
+		left: 30px;
+	    display: flex;
+	}
+	.caption{
+		font-size: 20px;
+		position: relative;
+		top: 200px;
+		left: -100px;
+		margin: 10px;
+	
+	}
+ </style>
+</head>
+<body>
+   <form>
+      <input type="text" id="text" placeholder="Restaurant Name, cuisine,a Dish">
+	  	  </div>
+   </form>
+   </form>
+	  <div class="options">
+	    <ul>
+		   <li class="drop-1">Cuisines
+		     <option class=taste>
+			   <select>Afghan</select>
+ 			   <select>African</select>
+			   <select>American</select>
+			   <select>Andhra</select>
+			  <select>Arabian</select>
+			 </option>
+		   </li>
+		   <li>Rating : 4.0+</li>
+		   <li>MaxSafety</li>
+		   <li>Fastest Delivery</li>
+		   <li>Offers</li>
+		   <li>Takeaway</li>
+		   <li class="drop-2">
+		       <option class="check">
+			   <select>Under 30 mins</select>
+ 			   <select>Pure Veg</select>
+			   <select>Previously Ordered</select>
+			   <select>On Time or Free</select>
+			 </option>
+		   </li>
+		   <li class="popular">Popular</li>
+		</ul>
+    <div class="container">
+        <div class="receipe">
+			<img src="./burger.jpg" alt="burger">
+			  <div class="caption">Burger</div>
+			<img src="./chicken.jpg" alt="chicken">
+			  <div class="caption">Chicken</div>
+			<img src="./french.jpg" alt="french">
+		  	  <div class="caption">French Fries</div>
+			<img src="./noodles.jpg" alt="noodles">
+			  <div class="caption">Noodles</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+	                       /* ->    Grid is one of the layout of web page which is much easier than float and positioning.
+							  ->	We can access grid property by giving parent as display: grid. */
+		          
+   .container {
+        display: grid;
+                         /* -> By using grid grid-template we can create number of rows and columns of size. */
+
+        grid-template-columns: auto auto auto;
+        grid-gap: 10px;
+        background-color: chocolate;
+        padding: 10px;
+          }
+
+   .container  div {
+       background-color: rgba(255, 255, 255, 0.8);
+       text-align: center;
+       padding: 20px 0;
+      font-size: 30px;
+     }
+
+   .item1 {
+              /* use the grid-column property to specify on which column to place an item, how many columns the item will span.     */
+
+      grid-column-start: 1;
+      grid-column-end: 3;
+	  grid-row: 1/ span 3;
+    }
+	
+</style>
+</head>
+<body>
+
+<h1>Grid Lines</h1>
+
+<div class="container">
+  <div class="item1">1</div>
+  <div class="item2">2</div>
+  <div class="item3">3</div>  
+  <div class="item4">4</div>
+  <div class="item5">5</div>
+  <div class="item6">6</div>
+  <div class="item7">7</div>
+  <div class="item8">8</div>  
+</div>
+</body>
+</html>

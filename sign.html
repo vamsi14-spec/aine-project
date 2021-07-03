@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+    <style>
+        body{
+          background: url(./nature.jpg) no-repeat;
+          background-size: cover;
+        }
+        .container{
+            border-radius: 10px;
+            width: 500px;
+            height: 500px;
+            margin-left:auto;
+            margin-right: auto;
+        }
+        h1{
+            text-align: center ;
+            font-family:'poppins',sans-serif;
+            font-size: 2rem;
+
+        }
+        label{
+            position: absolute;
+            top: 50px;
+            right: 50px
+            text-align: center;
+            font-size: 50px;
+        }
+        input{
+            border: none;
+            border-bottom: 2px solid black;
+            font-family: 'poppins',sans-serif;
+            font-size: 1rem;
+            height: 40px;
+            width: 300px;
+            margin: 10px 100px 0 100px;
+            border-top-right-radius: 5px;
+            border-top-left-radius: 5px;
+            padding-left: 10px;
+        }
+        button{
+            border-radius: 5px;
+            padding: 10px;
+            margin-left: 200px ;
+            background: rgb(30, 155, 197);
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>SignUp</h1>
+        <label>+</label>
+        <input type="text" name="name" id="name" placeholder="Enter Your Name"><br>
+        <input type="email" name="email" id="email" placeholder="Enter Your Email"><br>
+        <input type="password" name="password" id="pswd" placeholder="Enter Your Password"><br>
+        <input type="password" name="password" id="pswd" placeholder="Re-Enter Your Password"><br>
+        <button type="submit" onclick="signup();" id="a">SignUp</button>
+    </div>
+    <script>
+        var container = document.getElementById('name');
+        var anchor = document.querySelector('button');
+        function signup() {
+        anchor.href = 'data:text/plain;charset=utf-8,' + encodeURIComponent(container.value);
+        anchor.download = 'export.txt';
+};
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<style>
+    .class{
+        font-weight: bold;
+        color: white;
+        background: rgb(40, 228, 34);
+    }
+    #js{
+        background: #000;
+        color: honeydew;
+        width: 200px;
+        height: 50pxpx;
+        text-align: center;
+        font-family: 'poppins',sans-serif;
+        padding: 50px;
+        font-weight: bold;
+    }
+    button{
+        background: lightgreen;
+    }
+    .box{
+        width: 50px;
+        height: 50px;
+        background: magenta;
+        margin-top: 10px;
+        position: relative;
+    }
+</style>
+</head>
+<body>
+    <h2 id="name">JQuery</h2>
+    <input type="text" name="search" id="search">
+    <button type="submit" class="search">search</button>
+    <input type="button" value= "click" id="btn">
+    <p id="about">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor adipisci aliquid sit voluptates voluptatem ratione doloribus atque dolorum, incidunt, quisquam enim, nesciunt similique hic quasi esse sint et. Molestiae, voluptatum!</p>
+    <p id="change">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, officia earum debitis laboriosam ratione aliquam, odit architecto voluptatem maxime, inventore quos dicta officiis? Iure eos consectetur magni ipsam ullam dignissimos.</p>
+    <div id="js">Learn JavaScript</div>
+    <button id="button">Learn</button><br><br>
+    <B>Slide Effects</B>
+    <button class="animate">Animate</button>
+    <button id="animate">Move</button>
+    <div class="box"></div>
+  
+<script>
+    // to add css use CSS()
+    $('h2').css('font-size','20px');
+    // to set content use HTML()
+    $('#js').html('I m a developer')
+   $('input').css('border-radius','10px')
+   $('button').css('background','rgba(0,255,0,0.8)')
+   // hide method
+           // $('h2').hide()
+   // css pseudo selector
+//    $('li:first').css('background','green')
+//    $('li:last').css('background','yellow')
+      $('li:nth-child(2n)').css("background","grey")
+
+      /* Events */
+      
+      // by using CLICK 
+    //  $('.search').click(function(){
+    //      $('p').css('background','lightgrey')
+    //  })
+
+     // by using ON method
+
+    //  $('#btn').on('click',function(){
+    //      $('p').css('background','red')
+    //  })
+      $('.search').on('mousemove',function(){
+        $('p').css('background','lightgreen')
+         $('p').css('font-size','20px')
+      })
+      $('.search').on('mouseleave',function(){
+        $('p').css('background','aqua')
+         $('p').css('font-size','15px')
+      })
+
+     // focus event
+
+     $('input').focus(function(){
+         $('#search').css('background','pink')
+     })
+    
+     $('input').blur(function(){
+         $('#search').css('background','none')
+     })
+   // jQuery html
+
+    $('#btn').on('click',function(){
+        $('p').css('background','red' )
+        $('p').html('<b>content changed by html</b>');
+    })
+    $('#btn').on('click',function(){
+        $('#change').css('background','pink' )
+        $('#change').text('<b>content changed by html</b>');
+    })
+  
+   // fade effect
+    $('#button').click(function(){
+     $('#js').fadeOut(3000)
+   
+    })
+    $('#button').click(function(){
+     $('#js').fadeIn(3000)
+   
+    })
+    $('#button').click(function(){
+     $('#js').fadeOut(3000)
+   
+    })
+   // slide effect
+   $('.animate').click(function(){
+      $('.box').animate({
+           left:300
+       })
+    })
+   $('#animate').click(function(){
+       var box= $('.box');
+       box.animate({
+           left:300
+       })
+       box.animate({
+           top:300
+       })
+       box.animate({
+           left:0,
+           top:300
+       })
+       box.animate({
+           top:0,
+           left:0
+       })
+    })
+
+</script>
+</body>
+</html>

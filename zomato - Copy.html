@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zomato</title>
+    <style>
+      .html{
+        display: flex;
+        justify-content: center;
+        align-items:center;
+      }
+      *{
+        padding: 0;
+        margin: 0;
+        box-sizing:border-box;
+      }
+      #text{
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding:1em;
+        width: 50%;
+        height: 10px;
+      }
+      .options ul{
+        list-style-type: none;
+        display: flex;
+      }
+      .options ul li{
+        padding: 5px;
+        font-size: 10px;
+        margin: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      /* .options ul .drop-1 .taste{
+        display: none;
+        position: relative;
+        top:0%; */
+
+      }
+      .options ul .drop-1 .taste:hover{
+        background: #fff;
+        display: initial;
+        height: 100px;
+      }
+      .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+        
+      }
+      .container img{
+        width: 200px;
+        height: 200px;
+        border-radius: 10%;
+        margin-right: 0;
+      }
+      .container .item{
+        font-size: 1em;
+        font-family: Arial, Helvetica, sans-serif;
+        font-style: bold;
+        text-align: center;
+        position: relative;
+        left: -130px;
+        top:120px;
+        border: 1px soid #ccc;
+      }
+    </style>
+</head>
+<body>
+      <form>
+         <input type="text" id="text" placeholder="Restaurant Name, cuisine,a Dish">
+      </form>
+         <div class="options">
+           <ul>
+              <li class="drop-1">Cuisines
+                <select class=taste>
+                  <option>Afghan</option>
+                  <option>African</option>
+                  <option>American</option>
+                  <option>Andhra</option>
+                  <option>Arabian</option>
+                </select>
+              </li>
+              <li>Rating : 4.0+</li>
+              <li>Max Safety</li>
+              <li>Fastest Delivery</li>
+              <li>Offers</li>
+              <li>Takeaway</li>
+              <li class="drop-2">
+                  <select class="check">
+                  <option>Under 30 mins</option>
+                   <option>Pure Veg</option>
+                  <option>Previously Ordered</option>
+                  <option>On Time or Free</option>
+                  </select>
+              </li>
+              <li class="popular">Popular</li>
+           </ul>
+        </div>
+        <div class="container">
+          <img src="./burger.jpg" alt="Burger">
+          <span class="item">Burger</span>
+          <img src="./chicken.jpg" alt="Chicken">
+          <span class="item">Chicken</span>
+          <img src="./french.jpg" alt="French">
+          <span class="item">Fries</span>
+          <img src="./noodles.jpg" alt="Noodles">
+          <span class="item">Noodles</span>
+        </div>
+</body>
+</html>

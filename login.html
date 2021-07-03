@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Login</title>
+ <style>
+   h1{
+      color: orange;
+	 text-align: center;
+	 padding: 20px;
+	 background: black;
+	 opacity: 0.4;
+   }
+   .login{
+       background: grey;
+	  width: 800px;
+	  height: 500px;
+	  margin-left: auto;
+	  margin-right: auto;
+	  opacity: 0.9;
+   }
+   #name,#pswd{
+     border: 1px solid grey;
+	 border-radius: 3px;
+	 width: 500px;
+	 padding: 7px;
+	 color: red;
+	 margin: 10px 0;
+	  margin-left: 30px;
+   }
+   #login{
+      float: left;
+	  border: 1px solid grey;
+	  background: #4FF14E;
+	  border-radius: 3px;
+	  padding: 7px;
+	  color: white;
+	  margin: 10px 0;
+	  margin-left: 30px;
+   }
+   label{
+      color: white;
+	  margin: 30px;
+	  font-weight: bold;
+	  font-family: san-serif;
+   }
+   span{
+     margin-left: 30px;
+	 font-size: 5px;
+   }
+ </style>
+ </head>
+ <body>
+   <form>
+
+   <div class = "login">
+        <h1>Login</h1>
+     <label for = "name">Enter your name : <br>
+     <input type = "text" id = "name" placeholder = "Enter your name"><br>
+	 <span id= "usererr">User name is not empty</span><br>
+     <label for = "pswd">Enter your password : <br>
+     <input type = "password" id = "pswd" placeholder = "Enter your password"><br>
+	  <span id="pswderr">password is not empty</span>
+     <button type = "submit" id = "login">Login</button>
+   </form>
+   </div>
+   <script>
+   window.onload = function() {
+   var name=null,pswd=null;
+	name = document.getElementById('name').value
+	pswd = document.getElementById('pswd').value;
+     if(name=='' || name==null){
+      document.getElementById('usererr').style.display = 'none';
+	  }
+	   if(pswd=='' || pswd==null){
+	  document.getElementById('pswderr').style.display = 'none';
+	  }
+};
+   document.getElementById('login').addEventListener('click',function(event){
+   event.preventDefault();
+   <!-- console.log(event); -->
+    var name,pswd;
+	name = document.getElementById('name').value;
+	pswd = document.getElementById('pswd').value;
+	if(name==''){
+	   document.querySelector('#name').style.border = '3px solid red';
+	   document.getElementById('pswd').style.border = '3px solid grey'; 
+	    document.getElementById('usererr').style.display = 'block';
+	}else if(pswd==''){
+	   document.querySelector('#pswd').style.border = '3px solid red';
+	   	document.querySelector('#name').style.border = '3px solid grey'; 
+		
+	    document.getElementById('pswderr').style.display = 'block';
+		document.getElementById('usererr').style.display = 'none';
+	}
+	else{
+	document.querySelector('#pswd').style.border = '3px solid grey'; 
+	document.querySelector('#name').style.border = '3px solid grey'; 
+	
+	 document.getElementById('usererr').style.display = 'none';
+	 document.getElementById('pswderr').style.display = 'none';
+	}
+	
+	
+	})
+   </script>
+</body>
+</html>

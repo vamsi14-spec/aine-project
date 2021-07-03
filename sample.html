@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.2.0/css/all.css">
+    <title>Sample</title>
+    <style>
+        .left{
+          width: 150px;
+          height: 100%;
+          border: 1px solid white;
+          box-shadow: 5px 10px 8px 10px #888888;
+
+          float: left;
+          position: fixed;
+          top: 0;
+          background: white;
+        }
+        .right{
+            width: 90%;
+            height: 600px;
+            background: lightgrey;
+            opacity: 0.4;
+            position: relative;
+            left: 130px;
+            margin-top: 100px;
+            margin-left: 20px;
+        }
+        .box{
+            width: 70%;
+            border-radius: 5px;
+            background: white;
+            border: 1px solid white;
+            padding: 10px;
+            position: relative;
+            top: 50px;
+            left: 100px;
+            color: black;
+            
+            font-weight: bold;
+        }
+        .upload{
+            width: 20%;
+            height: 20%;
+            border-radius: 5px;
+            background: white;
+            border: 1px solid white;
+            padding: 10px;
+            position: relative;
+            top: 100px;
+            left: 100px;
+            color: black;
+            font-weight: bold;
+            text-align: center;
+        }
+        h3{
+            position: relative;
+            top: 100px;
+            left: 600px;
+        }
+        .fas{
+            display: block;
+            margin-top: 20px;
+            margin-left: 30px;
+            padding: 10px;
+            font-size: 40px;
+            color: lightgrey;
+        }
+        .books{
+            border-left: 5px solid blue;
+            background: lightskyblue;
+            width: 95%;
+            /* position: relative;
+            left: 0px; */
+        }
+        span{
+            margin-left: 30px;
+            color: grey;
+        }
+        .caret{
+            color: black;
+            font-size: 20px;
+        }
+        p{
+            font-weight: bold;
+            font-size: 20px;
+            /* margin-top: 0; */
+            position: relative;
+            top: -50px;
+            left: 60px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="left">
+            <i class="fas fa-bullseye"></i>
+            <i class="fas fa-user-alt"></i>
+            <span>Students</span>
+            <div class="books">
+            <i class="fas fa-book "></i>
+            </div>
+            <span>Lesson plan</span>
+            <i class="fas fa-cog"></i>
+            <span>Settings</span>
+        </div>
+        <div class="right">
+            <i class="fas fa-caret-left caret"></i>
+            <p>Videos</p>
+            <input type="text" class="box" value="Insert URL here"> 
+            <h3>or</h3>
+            <input type="text" class="upload" value="Upload"> 
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Fetching API</h1>
+    <script>
+    // call a fetch and it returns promise whereas promises has two methods : 1. then() and 2. catch() 
+    fetch('doc.txt').then(function(response){
+        return response.text(); // it returns a new promise
+    }).then(function (text){     // text refers to the content inside a response.
+       document.write(text);
+    }).catch(function(error){    // this catch method will occur when any error exists in the code.
+        console.log(error);
+    })
+   </script>
+</body>
+</html>

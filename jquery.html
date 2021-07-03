@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery</title>
+</head>
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <h3 style="color:orange">Find Even or Odd Number</h3>
+    
+     //  Even or Odd number
+
+    <script>
+      $(document).ready(function () {
+          var a = prompt('Enter a number');
+          if(a%2==0){
+              document.write('Given number is : Even')
+          }else{
+            document.write('Given number is : Odd')
+          }
+      })
+    
+    </script>
+   
+   // Leap year
+
+    <script>
+        $(document).ready(function(){
+            var x= prompt('Enter a number');
+            if((x%4==0)||(x%100==0)&&(x%400==0)){
+                console.log('Given number is : Leap year');
+            }else{
+                console.log('Given number is : Not a Leap year');
+            }
+        })
+    </script>
+
+   // Pattern Program
+
+    <script>
+        $(document).ready(function(){
+            var i,j,n=5;
+            for(i=1;i<=n;i++){
+               for(j=1;j<=i;j++){
+                   console.log('*');
+               }
+                   console.log('<br>');
+            }
+        })
+    </script>
+    
+    // Palindrome number
+
+     <script>
+    $(document).ready(function(){ 
+         var n=151,r;
+         var sum=0;
+         while(n>0){
+          r=n%10;
+	      sum=sum*10+r;
+	      n=n/10;
+	  }
+  document.write('Given number is a palindrome'); 
+    })
+    </script> 
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Validation</title>
+    <style>
+        body{
+            background: blue;
+        }
+        .container{
+            background: white;
+            width: 300px;
+            height: 300px;
+            box-shadow: 2px 10px 4px;
+            border-radius: 20px;
+            transform: translate(350px,50px);
+        }
+       #text{
+           border: none;
+           border-bottom: 2px solid black;
+           margin: 100px 0 0 50px;
+           padding: 10px;
+       }
+       button{
+           background: blue;
+           color: white;
+           padding: 10px;
+           width: 100px;
+           margin: 10px auto;
+           transform: translate(50%,50%);
+           border-radius: 10px;
+       }
+    </style>
+</head>
+<body>
+    <div class="container">
+      <form>
+        <input type="text" id="text" placeholder=" Enter Email"><br>
+        <button type="button" onclick="validate()">Submit</button>
+      </form>
+    </div>
+    <script>
+        function validate(){
+            var mail= document.getElementById("text").value;
+            var regx= /^([a-zA-Z0-9\.]+)@([a-zA-Z0-9])+.([a-z]+)(.[a-z]+)?$/;
+            if(regx.text(mail)){
+                alert("you have provided a valid Email ID");
+                return true;
+            }else{
+                alert("sorry! It is invalid Email ID");
+                return false;               
+            }
+        }
+    </script>
+</body>
+</html>
